@@ -53,12 +53,12 @@ class MainClass
 						macronutrients[eatIndex] = new Macronutrient(file.ReadLine ());
 					}
 		            
-                    isPossible = false;
-                    var combinations = new Macronutrient[eatTimes];
-                    for (int len = 1; len <= eatTimes; len++)
-                    {
-                        GetCombinations(macronutrients, combinations, 0, 1, len, expected);
-                    }
+					isPossible = false;
+					var combinations = new Macronutrient[eatTimes];
+					for (int len = 1; len <= eatTimes; len++)
+					{
+					    GetCombinations(macronutrients, combinations, 0, 1, len, expected);
+					}
 
 					outputFile.WriteLine (String.Format("Case #{0}: {1}", i,
 						isPossible ? "yes" : "no"
